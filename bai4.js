@@ -1,20 +1,3 @@
-//Dựa vào code javascript phía dưới, sử dụng getter và setter để hoàn thành code 
-
-// var person ={
-//     firstname: "Albert",
-//     lastname: "Einstein",
-
-//     function(_lastname){
-//         this.lastname = _lastname;
-//     },
-
-//     function (_firstname){
-//         this.firstname =_firstname;
-//     },
-// };
-// person.setLastName('Newton');
-// person.setFirsName('Issac');
-// console.log(person.getFullName());
 
 var person = {
     _firstname: "Albert",
