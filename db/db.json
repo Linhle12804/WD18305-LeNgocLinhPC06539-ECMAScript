@@ -1,0 +1,16 @@
+{
+  "classes": [
+    {
+      "name": "hihi",
+      "grade": "1",
+      "totalStudents": "45",
+      "id": 1
+    }
+  ],
+  "grades": [
+    {
+      "name": "12",
+      "id": 1
+    }
+  ]
+}

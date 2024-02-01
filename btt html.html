@@ -1,0 +1,204 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý Sản phẩm</title>
+    <!-- Thêm Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <style>
+      .container {
+        margin-top: 50px;
+      }
+
+      .grades-list,
+      .classes-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .grades-item,
+      .classes-item {
+        margin-bottom: 5px;
+        cursor: pointer;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2 class="text-center mb-4">Quản lý lớp học</h2>
+
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Khối học</h3>
+          <ul class="list-group grades-list" id="grades-list">
+            <!-- Các danh mục sẽ được hiển thị ở đây -->
+          </ul>
+
+          <form id="addGradesForm">
+            <div class="form-group">
+              <label for="gradeName">Chọn khối:</label>
+              <input
+                type="text"
+                id="gradeName"
+                name="gradeName"
+                class="form-control"
+                required
+              />
+            </div>
+
+            <button type="button" class="btn btn-primary" id="addGradesButton">
+              Thêm mới
+            </button>
+          </form>
+
+          <form id="editGradesForm">
+            <div class="form-group">
+              <label for="editGradesName">Khối:</label>
+              <select
+                id="editGradesName"
+                name="editGradesName"
+                class="form-control"
+                required
+              >
+                <!-- Các danh mục sẽ được thêm vào đây bằng JavaScript -->
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="newGradesName">Tên mới:</label>
+              <input
+                type="text"
+                id="newGradesName"
+                name="newGradesName"
+                class="form-control"
+                required
+              />
+            </div>
+
+            <button type="button" class="btn btn-success" id="editGradesButton">
+              Sửa
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              id="deleteGradesButton"
+            >
+              Xóa
+            </button>
+          </form>
+        </div>
+
+        <div class="col-md-6">
+          <h3>Danh sách lớp</h3>
+          <ul class="list-group classes-list" id="classes-list">
+            <!-- Các sản phẩm sẽ được hiển thị ở đây -->
+          </ul>
+
+          <form id="addClassesForm">
+            <div class="form-group">
+              <label for="classesName">Tên lớp:</label>
+              <input
+                type="text"
+                id="classesName"
+                name="classesName"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="totalStudents">Sĩ số :</label>
+              <input
+                type="text"
+                id="totalStudents"
+                name="totalStudents"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="classesGrades">Chọn khối:</label>
+              <select
+                id="classesGrades"
+                name="classesGrades"
+                class="form-control"
+                required
+              ></select>
+            </div>
+
+            <button type="button" class="btn btn-primary" id="addClassesButton">
+              Thêm mới
+            </button>
+          </form>
+
+          <form id="editClassesForm">
+            <div class="form-group">
+              <label for="editClassesName">Chọn lớp:</label>
+              <select
+                id="editClassesName"
+                name="editClassesName"
+                class="form-control"
+                required
+              >
+                <!-- Các sản phẩm sẽ được thêm vào đây bằng JavaScript -->
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="chooseGrades">Khối:</label>
+              <select
+                id="chooseGrades"
+                name="chooseGrades"
+                class="form-control"
+                required
+                readonly
+              ></select>
+            </div>
+
+            <div class="form-group">
+              <label for="newTotalStudents">Sĩ số:</label>
+              <input
+                type="text"
+                id="newTotalStudents"
+                name="newTotalStudents"
+                class="form-control"
+                required
+              />
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-success"
+              id="editClassesButton"
+            >
+              Sửa
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              id="deleteClassesButton"
+            >
+              Xóa
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Thêm Bootstrap JS và Popper.js (nếu chưa có) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Thêm tệp JavaScript -->
+    <script src="btt.js" type="module"></script>
+  </body>
+</html>

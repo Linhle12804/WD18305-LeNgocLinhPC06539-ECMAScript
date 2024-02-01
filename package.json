@@ -1,0 +1,16 @@
+{
+  "name": "wd18305-lengoclinhpc06539-ecmascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bai1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "type": "module",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "json-server": "^1.0.0-alpha.23"
+  }
+}
